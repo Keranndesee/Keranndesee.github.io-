@@ -1,3 +1,4 @@
+
 // BOUTON PRINCIPAL
 
 const uselessBtn = document.getElementById("uselessBtn");
@@ -19,14 +20,14 @@ const messages = [
     "Bah à un moment faudrait vraiment penser à arrêter je t'avoue quand même...",
     "Il va vraiment rien se passer tu sais ?",
     "J'espère que t'as bu de l'eau parce que ça risque d'être long...",
-    "j'espère qu'au moins tu te sens plus utile qu'au quotidien...",
-    "Tu continues de cliquer ? on t'aime quand même hein...",
+    "J'espère qu'au moins tu te sens plus utile qu'au quotidien...",
+    "Tu continues de cliquer ? On t'aime quand même hein...",
     "Le bouton a un message : Tu forces.",
-    "Normalement tu as vite fait le tour pourquoi t'es encore là ?"
+    "Normalement tu as vite fait le tour pourquoi t'es encore là ?",
     "Pas ouf, recommence pour voir ?"
 ];
 
-uselessBtn.addEventListener("click", () => {
+uselessBtn?.addEventListener("click", () => {
     clicks++;
 
     counter.textContent = String(clicks).padStart(4, "0");
@@ -55,23 +56,19 @@ const excuses = [
     "Je me suis cassé un neurone"
 ];
 
-document.getElementById("excuseBtn").addEventListener("click", () => {
-
+document.getElementById("excuseBtn")?.addEventListener("click", () => {
     const random = Math.floor(Math.random() * excuses.length);
 
     document.getElementById("excuseResult").textContent =
         excuses[random];
-
 });
 
 
 // TEST D'EXISTENCE
 
-document.getElementById("existBtn").addEventListener("click", () => {
-
+document.getElementById("existBtn")?.addEventListener("click", () => {
     document.getElementById("existResult").textContent =
-        "STATUT : Vivant. Objectif : Aucun. Mais au moins t'es là c'est déjà ça ^^' ";
-
+        "STATUT : Vivant. Objectif : Aucun. Mais au moins t'es là c'est déjà ça ^^'";
 });
 
 
@@ -80,7 +77,8 @@ document.getElementById("existBtn").addEventListener("click", () => {
 const loadingBtn = document.getElementById("loadingBtn");
 const progressBar = document.getElementById("progressBar");
 const loadingResult = document.getElementById("loadingResult");
-loadingBtn.addEventListener("click", () => {
+
+loadingBtn?.addEventListener("click", () => {
 
     let progress = 0;
 
@@ -102,7 +100,6 @@ loadingBtn.addEventListener("click", () => {
                 "Rien n'a été trouvé. Je t'avais prévenu...";
 
             loadingBtn.disabled = false;
-
         }
 
     }, 200);
