@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --background: #f4f0e8;
+    --black: #171717;
+    --blue: #a8c7ff;
+    --pink: #ffb5d0;
+    --green: #c6f5b4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    color: var(--black);
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0 7%;
+}
+
+/* HEADER */
+
+header {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--black);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: #777;
+    font-size: 13px;
+    vertical-align: top;
+}
+
+.status {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 100px 0 75px;
+}
+
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.95;
+    letter-spacing: -7px;
+    font-weight: 700;
+}
+
+h1 span {
+    color: #777;
+    font-style: italic;
+}
+
+.description {
+    max-width: 400px;
+    margin: 30px auto;
+    line-height: 1.7;
+    color: #666;
+}
+
+.main-button {
+    margin: 35px 0 20px;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 700;
+    border: 2px solid var(--black);
+    padding: 15px 25px;
+    background: var(--blue);
+    box-shadow: 5px 5px 0 var(--black);
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 var(--black);
+}
+button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+#message {
+    font-size: 12px;
+    color: #777;
+    margin-top: 25px;
+}
+
+/* COUNTER */
+
+.counter-card {
+    background: var(--pink);
+    border: 2px solid var(--black);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 6px 6px 0 var(--black);
+}
+
+.counter-card > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+#counter {
+    font-size: 65px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.counter-card span {
+    font-size: 12px;
+}
+
+/* TOOLS */
+
+.tools { padding: 100px 0;
+}
+
+.tools h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tool-card {
+    border: 2px solid var(--black);
+    padding: 25px;
+    background: white;
+    box-shadow: 5px 5px 0 var(--black);
+    min-width: 0;
+}
+
+.tool-card:nth-child(2) {
+    background: var(--green);
+}
+
+.tool-card:nth-child(3) {
+    background: var(--blue);
+}
+
+.tool-card > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.tool-card h3 {
+    font-size: 21px;
+    margin: 25px 0 10px;
+}
+
+.tool-card > p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tool-card button {
+    padding: 10px 15px;
+    background: var(--background);
+}
+
+#excuseResult,
+#existResult,
+#loadingResult {
+    margin-top: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* PROGRESS BAR */
+
+.progress {
+    height: 10px;
+    background: white;
+    border: 1px solid var(--black);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: var(--black);
+    transition: width 0.2s;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--black);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 750px) {
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        letter-spacing: -4px;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .tools {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        padding: 0 5%;
+    }
+
+    .status {
+        font-size: 9px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
